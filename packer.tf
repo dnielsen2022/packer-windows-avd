@@ -89,7 +89,7 @@ data "github_repository" "packer_windows_avd" {
 
 resource "github_actions_secret" "github_actions_azure_credentials" {
   repository  = data.github_repository.packer_windows_avd.name
-  secret_name = "AZURE_CREDENTIALS"
+  secret_name = "GHTOKEN"
 
   plaintext_value = jsonencode(
     {
