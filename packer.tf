@@ -26,7 +26,7 @@ provider "azurerm" {
 variable "location" {
   type        = string
   description = "Azure region for Packer resources."
-  default     = "Switzerland North"
+  default     = "East US"
 }
 
 # Packer Resource Groups
@@ -82,7 +82,7 @@ resource "azurerm_role_assignment" "packer_artifacts_contributor" {
 # Export Variables For Packer
 
 data "github_repository" "packer_windows_avd" {
-  full_name = "schnerring/packer-windows-avd"
+  full_name = "dnielsen2022/packer-windows-avd"
 }
 
 # Azure CLI Authentication
